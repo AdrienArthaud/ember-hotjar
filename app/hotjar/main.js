@@ -19,6 +19,8 @@ function load(id, forceSSL, snippetVer) {
 
     let a=document.getElementsByTagName('head')[0];
     let r=document.createElement('script');
+    r.setAttribute('type', 'text/plain');
+    r.setAttribute('data-cookieconsent', 'statistics');
     r.async=1;
     r.src = `${prefix}static.hotjar.com/c/hotjar-${window._hjSettings.hjid}.js?sv=${window._hjSettings.hjsv}`;
     a.appendChild(r);
